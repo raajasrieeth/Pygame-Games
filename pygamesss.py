@@ -1,5 +1,8 @@
 import pygame
-pygame.init()
+pygame.init()#Search Results
+
+pygame. init() #initialize all imported pygame modules. No exceptions will be raised if a module fails, 
+#but the total number if successful and failed inits will be returned as a tuple.
 win = pygame.display.set_mode((500,500))#screen
 
 pygame.display.set_caption("My First Game")
@@ -11,6 +14,7 @@ width=60
 height=40
 vel = 5
 run = True
+
 #main loop:
 while run:
 	pygame.time.delay(100)#in millisecs
@@ -24,7 +28,7 @@ while run:
 		# to move the rect
 	keys=pygame.key.get_pressed()#returns a list of keys pressed
 	if keys[pygame.K_LEFT]:
-		x -= vel #refer to pygame graphing
+		x -= vel #refer to pygame graphing , this causes change in position
 	if keys[pygame.K_RIGHT]:
 		x += vel
 	if keys[pygame.K_UP]:
