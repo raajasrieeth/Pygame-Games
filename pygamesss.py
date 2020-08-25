@@ -1,8 +1,8 @@
 import pygame
-pygame.init()#Search Results
 
 pygame. init() #initialize all imported pygame modules. No exceptions will be raised if a module fails, 
 #but the total number if successful and failed inits will be returned as a tuple.
+
 win = pygame.display.set_mode((500,500))#screen
 
 pygame.display.set_caption("My First Game")
@@ -20,7 +20,7 @@ while run:
 	pygame.time.delay(100)#in millisecs
 	for event in pygame.event.get():#returns actions that took place
 		if event.type==pygame.QUIT:#its the close button
-			run=False
+			run=False# comes out of the loop
 		pygame.draw.rect(win,(255,0,0), (x,y,width,height))#takes 3 parameters:where to draw the rect(any other shape is also possible)
 		#parameters: where to draw(window), color(r,g,b)(max value=255),tuple with position,dimensions
 		# to display the rect:
@@ -38,4 +38,4 @@ while run:
 	win.fill((0,0,0))# fills the background so that we dont see a mess of rectangles , see pygame docs for more info
 	
 
-pygame.quit()
+pygame.quit()# once out of the loop, pygame quits the window.
